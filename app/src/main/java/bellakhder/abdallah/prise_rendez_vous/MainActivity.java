@@ -1,6 +1,7 @@
 package bellakhder.abdallah.prise_rendez_vous;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -113,11 +114,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.v("TEST",msg);
 
                 ///
+                String tab[] = msg.split(" ");
 
-                if (msg.equals("CLIENT")) {
+
+
+
+
+                if (msg.contains("CLIENT")) {
+
+
+
+
+                    SharedPreferences settings = MainActivity.this.getSharedPreferences("meet-ili", 0);
+                    SharedPreferences.Editor editor = settings.edit();
+                    //String prevVal = settings.getString("UserType","");
+                    editor.putString("User", tab[1]);
+                    editor.apply();
                     Intent j = new Intent(MainActivity.this, clientlogged.class);
                     startActivity(j);
-                }else if (msg.equals("ADMIN")){
+                }else if (msg.contains("ADMIN")){
+                    SharedPreferences settings = MainActivity.this.getSharedPreferences("meet-ili", 0);
+                    SharedPreferences.Editor editor = settings.edit();
+                    //String prevVal = settings.getString("UserType","");
+                    editor.putString("User", tab[1]);
+                    editor.apply();
                     Intent x = new Intent(MainActivity.this, loggedadmin.class);
                     startActivity(x);
                 }else {

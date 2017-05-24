@@ -1,6 +1,7 @@
 package bellakhder.abdallah.prise_rendez_vous;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,10 +52,15 @@ public class clientlogged extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent a=new Intent(clientlogged.this,ficheadmin.class);
-                getIntent().putExtra("dr",listView.getItemAtPosition(i).toString());
+                getIntent().putExtra("dr",listView.getItemAtPosition(i).toString().split(" ")[0]);
                 startActivity(a);
             }
         });
+
+        SharedPreferences settings = this.getSharedPreferences("meet-ili", 0);
+        SharedPreferences.Editor editor = settings.edit();
+        String val = settings.getString("User","");
+        Toast.makeText(this, val, Toast.LENGTH_LONG).show();
 
         initList();
 
@@ -130,11 +136,19 @@ public class clientlogged extends AppCompatActivity implements View.OnClickListe
 
 
 
+
+
+
     }
 
     @Override
     public void onClick(View view) {
         Intent i = new Intent(clientlogged.this, listrdvclient.class);
+        SharedPreferences settings = this.getSharedPreferences("meet-iLi", 0);
+        SharedPreferences.Editor editor = settings.edit();
+        //String prevVal = settings.getString("UserType","");
+        editor.putString("USER", "");
+        editor.apply();
         startActivity(i);
     }
 
@@ -196,7 +210,7 @@ public class clientlogged extends AppCompatActivity implements View.OnClickListe
                 try {
                     JSONArray jsonArray = new JSONArray(msg);
                     for(int i = 0;i<jsonArray.length();i++){
-                        listItems.add(jsonArray.getJSONObject(i).getString("profession_admin"));
+                        listItems.add(jsonArray.getJSONObject(i).getString("id_user") +" "+jsonArray.getJSONObject(i).getString("profession_admin"));
                     }
 
 
