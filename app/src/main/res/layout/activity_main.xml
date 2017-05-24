@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="bellakhder.abdallah.prise_rendez_vous.MainActivity"
+    android:weightSum="1"
+
+    android:background="@drawable/drimg"
+    >
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/ed1"
+        android:hint="nom utilisateur"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_weight="0.12" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/ed2"
+        android:layout_weight="0.12"
+        android:hint="mot de passe"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text="connecter"
+        android:layout_width="147dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="60dp"
+        android:id="@+id/bt1"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="inscription"
+        android:layout_marginLeft="60dp"
+        android:layout_width="144dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/bt2"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
+
+</LinearLayout>

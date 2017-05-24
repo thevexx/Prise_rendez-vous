@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_clientlogged"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/ts"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="bellakhder.abdallah.prise_rendez_vous.clientlogged">
+    <EditText
+        android:id="@+id/txtsearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rechercher"
+
+        />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="217dp"
+        >
+
+    </ListView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="194dp">
+    <TextView
+        android:text="consulter mes rendez-vous"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_height="48dp"
+        android:id="@+id/tv1"
+        android:layout_weight="1"
+        android:textStyle="normal|bold"
+        android:textSize="18sp" />
+    <ImageButton
+
+        android:layout_width="82dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="80dp"
+        android:elevation="10dp"
+        android:id="@+id/btnan"
+        android:src="@drawable/next"
+
+        android:background="@drawable/nextbt"
+
+        android:layout_alignBottom="@+id/btnan"
+        android:layout_toLeftOf="@+id/btnan"
+        android:layout_toStartOf="@+id/btnan"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp" />
+
+
+</LinearLayout>
+
+</LinearLayout>
+
+

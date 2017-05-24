@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_objectifrdv"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/ts"
+    tools:context="bellakhder.abdallah.prise_rendez_vous.objectifrdv"
+    android:weightSum="1">
+
+    <TextView
+        android:text="L'objectif client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:layout_weight="0.07"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:text="tv-nom et prnom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvrd1"
+        android:layout_weight="0.16" />
+
+    <TextView
+        android:text="tv-date et heure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvrd2"
+        android:layout_weight="0.14" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvrd3"
+        android:layout_weight="0.30"
+        android:text="tv-descripion" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="64dp"
+        android:layout_weight="0.24"
+        android:weightSum="1">
+
+        <ImageButton
+
+            android:layout_width="65dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="80dp"
+            android:elevation="10dp"
+            android:id="@+id/btnva"
+            android:src="@drawable/next"
+
+            android:background="@drawable/ace"
+
+            android:layout_alignBottom="@+id/btnan"
+            android:layout_toLeftOf="@+id/btnan"
+            android:layout_toStartOf="@+id/btnan"
+            android:layout_marginRight="19dp"
+            android:layout_marginEnd="19dp" />
+
+
+        <ImageButton
+
+            android:layout_width="68dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="80dp"
+            android:elevation="10dp"
+            android:id="@+id/btnan"
+            android:src="@drawable/next"
+
+            android:background="@drawable/error"
+
+            android:layout_alignBottom="@+id/btnan"
+
+            android:layout_marginRight="19dp"
+            android:layout_marginEnd="19dp" />
+
+
+    </LinearLayout>
+</LinearLayout>
